@@ -5,7 +5,7 @@ export default function Header({ saleCount, onMenuToggle, menuOpen }) {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        Niadori <span>Events</span>
+        Adori <span>Events</span>
       </div>
 
       <div className={styles.actions}>

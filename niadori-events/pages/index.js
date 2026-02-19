@@ -46,7 +46,7 @@ const SALE_DEMO = [
     id: 5, nome: 'Ca\' Sagredo', citta: 'Venezia', categoria: 'Matrimoni',
     indirizzo: 'Campo Santa Sofia, Cannaregio', lat: 45.4415, lng: 12.3362,
     capienza: 100, mq: 250, prezzo_ora: null, prezzo_giornata: 6000,
-    descrizione: 'Palazzo storico affacciato sul Canal Grande. Un'ambientazione indimenticabile per matrimoni da sogno a Venezia.',
+    descrizione: 'Palazzo storico affacciato sul Canal Grande. Un &apos; ambientazione indimenticabile per matrimoni da sogno a Venezia.',
     servizi: ['Canal Grande', 'Arrivo in gondola', 'Catering esclusivo', 'Fotografo convenzionato'],
     telefono: '+39 041 2413111', email: 'events@casagredo.it', sito_web: 'https://casagredo.it',
   },

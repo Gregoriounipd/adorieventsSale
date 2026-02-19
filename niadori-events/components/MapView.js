@@ -5,7 +5,7 @@ const TILE_URL = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
 const TILE_ATTR = '&copy; <a href="https://carto.com/">CARTO</a>'
 
 // Centro Padova
-const CENTER = [45.4064, 11.8768]
+const CENTER = [45.4064, 11.8768] //padova zoom fisso
 const ZOOM = 10
 
 export default function MapView({ sale, onSalaClick, salaAttiva }) {
