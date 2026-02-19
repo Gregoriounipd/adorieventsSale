@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+:root {
+  --nero: #0c0b0a;
+  --nero-soft: #141210;
+  --oro: #c4943a;
+  --oro-light: #e2b86a;
+  --oro-dim: rgba(196,148,58,0.18);
+  --crema: #f0ebe0;
+  --grigio: #8a8278;
+  --bordo: rgba(196,148,58,0.15);
+  --card-bg: #faf7f2;
+  --radius: 14px;
+  --transition: 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: var(--nero);
+  color: var(--crema);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bordo); border-radius: 2px; }
+
+/* LEAFLET OVERRIDES */
+.leaflet-container {
+  font-family: 'DM Sans', sans-serif !important;
+  background: #1a1612 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  display: none; /* usiamo il nostro popup custom */
+}
+
+.leaflet-marker-icon {
+  background: none !important;
+  border: none !important;
+}
+
+/* CUSTOM MAP MARKER */
+.map-pin {
+  background: var(--nero);
+  border: 1.5px solid var(--oro);
+  color: var(--crema);
+  padding: 5px 12px;
+  border-radius: 24px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.5);
+  transition: all 0.2s ease;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.map-pin:hover,
+.map-pin.active {
+  background: var(--oro);
+  color: var(--nero);
+  transform: scale(1.06);
+  border-color: var(--oro-light);
+}
+
+.map-pin .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--oro);
+  flex-shrink: 0;
+}
+
+.map-pin:hover .dot,
+.map-pin.active .dot {
+  background: var(--nero);
+}

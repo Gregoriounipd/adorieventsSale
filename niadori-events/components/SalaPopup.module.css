@@ -1,0 +1,247 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 500px;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+  transform: translateY(24px) scale(0.96);
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  position: relative;
+}
+
+.overlay.open .card {
+  transform: translateY(0) scale(1);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: #1a1208;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1c1508, #3a2a0e);
+}
+
+.heroIcon {
+  font-size: 3.5rem;
+  opacity: 0.7;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 5;
+}
+
+.closeBtn:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.heroBadge {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--oro-light);
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(196,148,58,0.35);
+  padding: 4px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* BODY */
+.body {
+  padding: 22px 26px 28px;
+  color: var(--nero);
+}
+
+.city {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grigio);
+  margin-bottom: 6px;
+}
+
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--nero);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #f5f0e8;
+  border-radius: 10px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statIcon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.statValue {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--nero);
+  line-height: 1.1;
+}
+
+.statLabel {
+  font-size: 0.65rem;
+  color: var(--grigio);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* DESCRIZIONE */
+.description {
+  font-size: 0.88rem;
+  color: #4a4540;
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+/* SERVIZI */
+.servizi {
+  margin-bottom: 22px;
+}
+
+.serviziTitle {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grigio);
+  margin-bottom: 10px;
+}
+
+.serviziList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.servizio {
+  font-size: 0.78rem;
+  background: #f0ebe0;
+  border: 1px solid #e0d8c8;
+  color: #4a4540;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+/* CTA */
+.cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  flex: 1;
+  min-width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 18px;
+  background: var(--nero);
+  color: var(--crema);
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: opacity 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.btnPrimary:hover { opacity: 0.8; }
+
+.btnSecondary {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 18px;
+  background: transparent;
+  color: var(--nero);
+  text-decoration: none;
+  border: 1px solid #d0c8b8;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition: border-color 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.btnSecondary:hover { border-color: var(--oro); color: var(--oro); }
