@@ -9,6 +9,7 @@ import SalaPopup from '../components/SalaPopup'
 const MapView = dynamic(() => import('../components/MapView'), { ssr: false })
 
 export default function Home() {
+  const [sale, setSale] = useState([])
   const [menuOpen, setMenuOpen] = useState(false)
   const [salaAttiva, setSalaAttiva] = useState(null)
   const [filtroCategoria, setFiltroCategoria] = useState('Tutte')
