@@ -5,7 +5,7 @@ export default function Document() {
     <Html lang="it">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="Niadori Events — Trova le migliori sale eventi nel Veneto" />
+        <meta name="description" content="Adori Events — Trova le migliori sale eventi nel Veneto" />
       </Head>
       <body>
         <Main />
